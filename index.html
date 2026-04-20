@@ -13,7 +13,7 @@
         }
 
         img:hover {
-            filter: hue-rotate(300deg);
+            filter: grayscale(100%);
         }
 
         .pile {
@@ -103,8 +103,8 @@
             new_image.innerHTML = images[random_image()];
 
             // these two lines pick a random width for the image.
-            // 300 is the MAX width, and 100 is the MIN width.
-            var random_width = Math.floor(Math.random() * (300 - 100 + 1) + 100);
+            // 300 is the MAX width, and 140 is the MIN width.
+            var random_width = Math.floor(Math.random() * (300 - 140 + 1) + 140);
             var random_width_pixels = random_width + "px";
 
             // assign that random width to the new image

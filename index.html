@@ -36,20 +36,53 @@
     
     <script>
         // define your "batch of images" in an array
-       var images = [
-                "<img src='images/photo_1.png'>",
-                "<img src='images/photo_2.png'>",
-                "<img src='images/photo_3.png'>",
-                "<img src='images/photo_4.png'>",
-                "<img src='images/photo_5.png'>",
-                "<img src='images/photo_6.png'>",
-                "<img src='images/photo_7.png'>",
-                "<img src='images/photo_8.png'>",
-                "<img src='images/photo_9.png'>",
-                "<img src='images/photo_10.png'>",
-                "<img src='images/photo_11.png'>",
-                "<img src='images/photo_12.png'>",
-            ]
+        var imageFiles = [
+            "images/IMG_3531_2-496220b6-a4d5-41bb-a9f0-492dd72fba82.png",
+            "images/GAMEDAY_2-b1ffbcc8-a96e-4f69-a742-5b40266c1ac0.png",
+            "images/IMG_3529_2-e959e1fa-f915-4230-a1fd-af501d0aaafa.png",
+            "images/IMG_3534_2-d5e17437-ac80-4967-ab19-44c97e05bffc.png",
+            "images/IMG_3536_2-c4ef9f15-f212-423b-ae6d-f86ee016814b.png",
+            "images/IMG_3535_2-2a57e600-c123-4a43-9822-d5f57d96a733.png",
+            "images/GAME_1-421efee6-a499-417b-9502-3f3ae3f4f903.png",
+            "images/team_curry-5893df93-29d7-4645-943e-2f0b15291c6b.png",
+            "images/Artboard_1-94d222e1-4fe7-4a32-a7e8-5876e846a182.png",
+            "images/GULF_SHORES_DAY1-4614159e-e491-4e4d-9681-106f7be8a062.png",
+            "images/alcoa-2c64864d-8c4e-453a-b521-59a9fb5cd3fd.png",
+            "images/2_copy-8f2f5dc6-3e49-486c-8c39-16147fe0703e.png",
+            "images/IMG_8550-0dc9beee-05ce-4005-bf66-1b3fb74ff8d6.png",
+            "images/IMG_8549-a72ae198-69ad-4580-8ae7-d71068d932ae.png",
+            "images/IMG_8552-43327eaf-0424-4fc8-a53b-81d324279546.png",
+            "images/IMG_8551-8f764fb8-8fd5-444e-ac53-c4d5369b24d8.png",
+            "images/Screenshot_2026-03-30_at_10.59.04_AM-25370465-b6ec-4901-ad0f-67009c40b839.png",
+            "images/Screenshot_2026-03-30_at_10.58.24_AM-c3aba771-ae3a-4e8d-b837-0443c420b10b.png",
+            "images/Screenshot_2026-03-30_at_11.01.30_AM-59b6e40d-5259-440d-a73b-ced4b24acc90.png",
+            "images/Screenshot_2026-03-30_at_11.01.38_AM-2db00773-e141-4da2-8d1b-14968d4f4ec2.png",
+            "images/fuegopic-ac508dae-94c1-457a-adbc-9e288ce38cfb.png",
+            "images/iMockup_-_Google_Pixel_8_Pro-2-3ff33edf-7b0d-4a73-9e76-4afbcb2d59e0.png",
+            "images/Screenshot_2026-03-30_at_10.28.53_AM-4970c51c-648e-4c8a-be21-981d011291ba.png",
+            "images/P02_Icons_Template-b795441b-f130-4fd6-8e2a-32c954cacf75.png",
+            "images/IMG_8545-35efcce8-b48a-4c99-9d37-dda6f3d6ffb3.png",
+            "images/IMG_8548-6f3ddfe0-1fb6-4bc6-906f-e2035500e5bb.png",
+            "images/IMG_8547-dae5001d-42cd-40e0-bbb5-374cc18ce222.png",
+            "images/IMG_8541-24f44f0b-54f2-4503-af06-7afdd2efc139.png",
+            "images/IMG_8544-16748655-2ce7-4d9c-9713-41826c54c4c7.png",
+            "images/IMG_8538-ef87e223-ae2c-44e9-99bd-df8c4b115c65.png",
+            "images/Artboard_2-c684e9f7-d5f4-4373-b889-bef559b5fbc4.png",
+            "images/IMG_8542-650e959b-5ffc-46e5-8618-01fb4a7be28e.png",
+            "images/IMG_8539-c878b4cd-7b3f-4d35-93ce-664214624fb8.png",
+            "images/SB_Trading_Card_Camryn_Sarvis_2025-b73fa837-ca85-4e1b-a4dd-4341d0b3a0ae.png",
+            "images/IMG_8543-632e9a7b-5712-43b6-86df-e9a251e95d33.png",
+            "images/chris-ea1962ec-774e-4a3d-a695-b5332a9c20e7.png",
+            "images/track-569586a5-f011-4bf0-8539-62176c543ba0.png",
+            "images/Artboard_1-1a85d303-cbcc-4946-95bf-6cc9d6fa75b9.png",
+            "images/ofaf-60e73940-3447-4f78-91aa-4eb743f70c45.png",
+            "images/joey_10000-72ba6074-70a5-4582-9bd8-90c074ada9e8.png",
+            "images/ITA_sectional_copy-df1a4db4-090c-4473-9d4e-b4e567cc191e.png",
+            "images/first_p-f1ab0882-882c-4be4-b7f6-fb5ae35d3427.png"
+        ];
+        var images = imageFiles.map(function (src) {
+            return "<img src='" + src + "'>";
+        });
 
         // this function randomly picks an image from the batch
         function random_image() {
